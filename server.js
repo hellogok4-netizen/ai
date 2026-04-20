@@ -53,7 +53,7 @@ app.post('/api/generate', async (req, res) => {
     res.json({ output });
   } catch (error) {
     console.error('Groq Error:', error);
-    res.status(500).json({ error: 'Failed to generate code' });
+    res.status(500).json({ error: `Groq Error: ${error.message || 'Unknown error'}` });
   }
 });
 
