@@ -113,7 +113,11 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Roblox AI Architect Server running at http://localhost:${PORT}`);
-  console.log(`🔑 Connected to Groq AI Engine\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Roblox AI Architect Server running at http://localhost:${PORT}`);
+    console.log(`🔑 Connected to Groq AI Engine\n`);
+  });
+}
+
+module.exports = app;
