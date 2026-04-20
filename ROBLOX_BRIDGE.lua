@@ -6,7 +6,7 @@ local RunService = game:GetService("RunService")
 
 -- CONFIGURATION
 -- Replace this with your public server URL if hosting on Vercel/Render
-local SERVER_URL = "http://localhost:3000" 
+local SERVER_URL = "https://gokgokgok.vercel.app" 
 local SYNC_INTERVAL = 10 -- seconds between syncs
 
 local function syncWithAI()
